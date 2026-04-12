@@ -26,7 +26,7 @@ h1 {
 }
 
 h2 {
-	color: #ff69b4;
+	color: #8b4513;
 	font-size: 1.2rem;
 	margin-bottom: 1rem;
 	border-left: 4px solid #8b4513;
@@ -34,7 +34,7 @@ h2 {
 }
 
 h3 {
-	color: #ff69b4;
+	color: #8b4513;
 	font-size: 1.0rem;
 	margin-bottom: 1rem;
 }
@@ -43,7 +43,7 @@ section {
 	flex: 1;
 	background: white;
 	border-radius: 1.2rem;
-	padding: 1.5rem 1rem;
+	padding: 1.5rem;
 	border: 1px solid #8b4513;
 	box-shadow: 0 4px 12px rgba(139, 69, 19, 0.4);
 }
