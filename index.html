@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kanban Task Board</title>
+</head>
+<body>
+	<header>
+		<h1>Kanban Task Board</h1>
+		<div class="counter" id="task-counter">0 task</div>
+		<select id="priorityFilter" name="priorityFilter">
+			<option value="high">High</option>
+			<option value="medium">Medium</option>
+			<option value="low">Low</option>
+		</select>
+	</header>
+
+	<section id="todo">
+		<h2>To Do</h2>
+		<ul></ul>
+		<button>Add Task</button>
+	</section>
+
+	<section id="inprogress">
+		<h2>In Progress</h2>
+		<ul></ul>
+		<button>Add Task</button>
+	</section>
+
+	<section id="done">
+		<h2>Done</h2>
+		<ul></ul>
+		<button>Add Task</button>
+	</section>
+
+	<!--Modal-->
+	<div class="modal" id="taskModal">
+		<h3>Add Task</h3>
+		<label>Title:</label>
+		<input type="text" id="title" placeholder="Task Title">
+
+		<label>Description:</label>
+		<textarea id="desc" rows="2" placeholder="Write something..."></textarea>
+
+		<label>Priority:</label>
+		<select id="taskPriority">
+			<option value="high">High</option>
+			<option value="medium">Medium</option>
+			<option value="low">Low</option>
+		</select>
+
+		<label>Due Date:</label>
+		<input type="date" name="duedate">
+
+		<div class="modalActions">
+			<button id="saveTaskBtn">Save</button>
+			<button id="cancelTaskBtn">Cancel</button>
+		</div>
+	</div>
+	
+</body>
+</html>
