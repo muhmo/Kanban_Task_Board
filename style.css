@@ -1,0 +1,79 @@
+body {
+	font-family: system-ui, "Segoe UI", sans-serif;
+	background: #f5f5dc;
+	padding: 2rem 1.5rem;
+}
+
+header {
+	background: white;
+	border-radius: 1.5rem;
+	padding: 1.5rem 2rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 12px rgba(139, 69, 19, 0.4);
+	border: 1px solid #8b4513;
+}
+
+h1 {
+	font-size: 1.8rem;
+	color: #ff69b4;
+}
+
+h2 {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	border-left: 4px solid #8b4513;
+	padding-left: 0.7rem;
+}
+
+h3 {
+	font-size: 1.0rem;
+	margin-bottom: 1rem;
+}
+
+section {
+	background: white;
+	border-radius: 1.2rem;
+	padding: 1.5rem;
+	border: 1px solid #8b4513;
+	box-shadow: 0 4px 12px rgba(139, 69, 19, 0.4);
+}
+
+.modal {
+	background: #f5f5dc;
+	border-radius: 1.2rem;
+	border: 1px solid #8b4513;
+}
+
+.modal label {
+	font-weight: 600;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	color: #666666;
+	display: block;
+	margin-bottom: 0.3rem;
+}
+
+.modal input, textarea {
+	width: 100%;
+	padding: 0.7rem;
+	border: 2px solid #f5f4f0;
+	border-radius: 1rem;
+	font-family: inherit;
+	outline: none;
+}
+
+button {
+	background: #ff69b4;
+	color: white;
+	border: none;
+	font-weight: 600;
+	padding: 0.6rem 1.2rem;
+	border-radius: 2rem;
+	cursor: pointer;
+	font-family: inherit;
+	transition: 0.1s;
+}
+
+button:hover { 
+	background: #ff52a8; 
+}
