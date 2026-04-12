@@ -13,6 +13,13 @@ header {
 	border: 1px solid #8b4513;
 }
 
+main {
+	display: grid;
+  	grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  	gap: 20px;                             /* spacing between columns */
+  	padding: 20px;
+}
+
 h1 {
 	font-size: 1.8rem;
 	color: #ff69b4;
@@ -31,6 +38,7 @@ h3 {
 }
 
 section {
+	flex: 1;
 	background: white;
 	border-radius: 1.2rem;
 	padding: 1.5rem;
