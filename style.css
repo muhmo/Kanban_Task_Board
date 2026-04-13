@@ -16,6 +16,10 @@ header {
 	border: 1px solid #8b4513;
 }
 
+.header-row {
+	align-items: center;
+}
+
 .badge {
 	background: #ff69b4;
 	color: white;
@@ -25,7 +29,6 @@ header {
 	font-weight: bold;
 	display: inline-block; 
 	margin-top: 1rem;
-	vertical-align: middle;
 }
 
 .priorityFilter {
@@ -36,7 +39,6 @@ header {
 	border-radius: 0.5rem;
 	font-weight: 600;
 	cursor: pointer;
-	vertical-align: middle;
 }
 
 .grid {
@@ -148,4 +150,15 @@ button {
 
 button:hover { 
 	background: #ff52a8; 
+}
+
+.fadeOut {
+	animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+	to {
+		opacity: 0;
+		transform: scale(0.95);
+	}
 }
