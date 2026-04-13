@@ -1,23 +1,33 @@
 body {
 	font-family: system-ui, "Segoe UI", sans-serif;
 	background: #f5f5dc;
-	padding: 2rem 1.5rem;
+	padding: 1rem;
 }
 
 header {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
 	background: white;
 	border-radius: 1.5rem;
-	padding: 1.5rem 2rem;
+	padding: 1.5rem 1rem;
 	margin-bottom: 2rem;
 	box-shadow: 0 4px 12px rgba(139, 69, 19, 0.4);
 	border: 1px solid #8b4513;
 }
 
-main {
+.badge {
+	background: #ff69b4;
+	color: white;
+	padding: 0.3rem 0.8rem;
+	border-radius: 20px;
+	font-weight: bold;
+}
+
+.grid {
 	display: grid;
-  	grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  	gap: 20px;                             /* spacing between columns */
-  	padding: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
 }
 
 h1 {
@@ -43,18 +53,55 @@ section {
 	flex: 1;
 	background: white;
 	border-radius: 1.2rem;
-	padding: 1.5rem;
+	padding: 0.5rem;
 	border: 1px solid #8b4513;
 	box-shadow: 0 4px 12px rgba(139, 69, 19, 0.4);
 }
 
+ul {
+	min-height: 100px;
+	list-style: none;
+	padding: 0;
+}
+
+.task-card {
+	background: #f9fafb;
+	border: 1px solid #e5e7eb;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.is-hidden {
+	display: none;
+}
+
+.modal.hidden {
+	display: none;
+}
+
 .modal {
+	position: fixed;
 	background: #f5f5dc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border-radius: 1.2rem;
 	border: 1px solid #8b4513;
 }
 
-.modal label {
+.modal-content {
+	background: white;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	width: 300px;
+}
+
+.form-group {
+	margin-bottom: 0.8rem;
+}
+
+label {
 	font-weight: 600;
 	font-size: 0.8rem;
 	text-transform: uppercase;
@@ -63,7 +110,7 @@ section {
 	margin-bottom: 0.3rem;
 }
 
-.modal input, textarea {
+input, textarea {
 	width: 100%;
 	padding: 0.7rem;
 	border: 2px solid #f5f4f0;
@@ -77,8 +124,8 @@ button {
 	color: white;
 	border: none;
 	font-weight: 600;
-	padding: 0.6rem 1.2rem;
-	border-radius: 2rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
 	cursor: pointer;
 	font-family: inherit;
 	transition: 0.1s;
