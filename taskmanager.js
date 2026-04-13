@@ -151,8 +151,31 @@ filter.addEventListener("change", () => {
   });
 });
 
+// Handle Add Task buttons for each column
+document.querySelectorAll("button[data-column]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    // reset modal fields
+    titleInput.value = "";
+    descInput.value = "";
+    priorityInput.value = "medium";
+    dateInput.value = "";
+
+    // show modal
+    modal.style.display = "block";
+
+    // store which column this task should go to
+    modal.dataset.columnId = btn.getAttribute("data-column");
+
+    // clear any edit state
+    delete modal.dataset.editId;
+  });
+});
+
+// Update Save button to use columnId
 saveBtn.addEventListener("click", () => {
   const editId = modal.dataset.editId;
+  const columnId = modal.dataset.columnId || "todo"; // default to todo if not set
+
   if (editId) {
     updateTask(parseInt(editId), {
       title: titleInput.value.trim(),
@@ -163,13 +186,14 @@ saveBtn.addEventListener("click", () => {
     modal.style.display = "none";
     delete modal.dataset.editId;
   } else {
-    addTask("todo", {
+    addTask(columnId, {
       title: titleInput.value.trim(),
       desc: descInput.value.trim(),
       priority: priorityInput.value,
       date: dateInput.value
     });
     modal.style.display = "none";
+    delete modal.dataset.columnId;
   }
 });
 
