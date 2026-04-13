@@ -46,7 +46,6 @@ header {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 1rem;
-	min-height: 80vh;
 }
 
 h1 {
