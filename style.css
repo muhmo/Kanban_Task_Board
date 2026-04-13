@@ -21,7 +21,10 @@ header {
 	color: white;
 	padding: 0.3rem 0.8rem;
 	border-radius: 20px;
+	font-size: 0.7rem;
 	font-weight: bold;
+	display: inline-block; 
+	margin-top: 1rem;
 }
 
 .grid {
