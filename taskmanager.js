@@ -180,13 +180,15 @@ cancelBtn.addEventListener("click", () => {
 clearAllBtn.addEventListener("click", () => {
     const doneList = document.querySelector("#done ul");
     const cards = doneList.querySelectorAll(".task-card");
+
+    if (cards.length === 0) return;
     
     cards.forEach((card, index) => {
         setTimeout(() => {
             card.classList.add("fadeOut");
             card.addEventListener("animationend", () => {
-                const id = card.getAttribute("data-id");
-                tasks = tasks.filter(t => t.id != id);
+                const cardId = parsent(card.getAttribute("data-id"),10);
+                tasks = tasks.filter(t => t.id != cardId);
                 card.remove();
                 updateBadge();
             });

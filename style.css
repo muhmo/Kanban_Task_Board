@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: system-ui, "Segoe UI", sans-serif;
 	background: #f5f5dc;
@@ -130,9 +134,11 @@ ul {
 
 .modal-content {
 	background: white;
-	padding: 1rem;
-	border-radius: 0.5rem;
-	width: 300px;
+	padding: 2rem;
+	border-radius: 1rem;
+	width: 90%px;
+	max-width: 400px;
+	position: relative;
 }
 
 .form-group {
@@ -148,8 +154,9 @@ label {
 	margin-bottom: 0.3rem;
 }
 
-input, textarea {
+input, textarea. select {
 	width: 100%;
+	display: block;
 	padding: 0.7rem;
 	border: 2px solid #f5f4f0;
 	border-radius: 1rem;
