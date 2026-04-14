@@ -177,23 +177,26 @@ cancelBtn.addEventListener("click", () => {
     modal.classList.add("hidden");
 });
 
-clearAllBtn.addEventListener("click", () => {
-    const doneList = document.querySelector("#done ul");
-    const cards = doneList.querySelectorAll(".task-card");
 
-    if (cards.length === 0) return;
-    
-    cards.forEach((card, index) => {
+clearAllBtn.addEventListener("click", () => {
+
+    const allCards = document.querySelectorAll(".task-card");
+
+    if (allCards.length === 0) return;
+
+    allCards.forEach((card, index) => {
         setTimeout(() => {
             card.classList.add("fadeOut");
+            
             card.addEventListener("animationend", () => {
-                const cardId = parsent(card.getAttribute("data-id"),10);
-                tasks = tasks.filter(t => t.id != cardId);
                 card.remove();
-                updateBadge();
             });
-        }, index * 100); // Staggered effect
+        }, index * 50);
     });
+
+    tasks = [];
+
+    updateBadge();
 });
 
 // Event delegation on the <ul> containers
